@@ -1,4 +1,5 @@
 // Doğukan Avcı 01.06.2024
+//Robot Dreams Odev 2 : Vektör Fonksiyonları ve Örnekleri
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -45,23 +46,25 @@ int main() {
     std::cout << "Nokta Çarpımı Sonucu: " << dot_product_result << "\n";
 
     // Nokta çarpımı sonucuna göre karakterin boss'a arkasını dönüp dönmediğini kontrol edelim
-    // Nokta çarpımı sonucuna göre güvenli yönü belirle
+    // Nokta çarpımı sonucuna göre güvenli yönü belirleme.
     //Pozitifse, vektörler arasındaki açı 90°'den küçüktür (aynı yöndeler).
     //Negatifse, vektörler arasındaki açı 90°'den büyüktür (zıt yöndeler).
+    //Buna göre condition yazalım.
 
     if (dot_product_result < 0) {
         std::cout << "Güvenli: Karakter boss'a arkasını dönmüş durumda.\n";
     } else {
         std::cout << "Tehlikeli: Karakter boss'a bakıyor, zarar görecek ve belirli bir süre sersemletilecek.\n";
-        // Karakter boss'a bakıyorsa can değerini azalt
+        // Karakter boss'a bakıyorsa can değerini azalt.
         health -= damage;
-        // SersemletmeFonksiyonu()
+        // SersemletmeFonksiyonu() 
         std::cout << "Karakter hasar aldı ve 2 saniye sermsemledi. Kalan can: " << health << "\n";
     }
 
-    // Karakterin can değerini kontrol et
+    // Karakterin can değerini kontrol et...
     if (health <= 0) {
         std::cout << "Karakter öldü.\n";
+        // Oyuna baştan başla.
     }
 
     return 0;
